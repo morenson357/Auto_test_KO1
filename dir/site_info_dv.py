@@ -1,0 +1,3 @@
+auth_site = 'http://vm-dv-report-02.corp.btlab.ru/DocsvisionWebClient/Account/Login?tenantId=docsvision&returnUrl=%2FDocsvisionWebClient%2F'
+report_site = 'http://vm-dv-report-02.corp.btlab.ru/DocsvisionWebClient/#/RowView/4538149d-1fc7-4d41-a104-890342c6b4f8/a1dce6c1-db96-4666-b418-5a075cdb02c9/b6e5840c-92a0-4578-8a43-2f76159225c6'
+main_menu = "//body[@class='webclient-desktop no-touch ok-cancel-order']"
