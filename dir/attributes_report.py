@@ -1,3 +1,4 @@
+#Атрибуты создания отчета на вкладке Основная информация
 attributes_report_dictionary = {
     "Название отчета": "//div[@data-control-name='Name']//input",
     "Описание": "//div[@data-control-name='Description']//textarea",
@@ -18,6 +19,12 @@ attributes_report_dictionary = {
     "Обязательность": "//input[@id='BTL_Required[]']",
     "Скрытый": "//input[@id='BTL_Hidden[]']",
     "Свойства": "//div[@data-control-name='BTL_Properties[]']//input"
+}
+#Атрибуты создания отчета на вкладке Условия доступности
+attributes_report_dictionary_access = {
+    "Группы": "//div[@data-control-name='BTL_Groups']//div[@class='open-dictionary-button-icon dv-ico dv-ico-dictionary']",
+    "Подразделения": "//div[@data-control-name='BTL_Units']//div[@class='open-dictionary-button-icon dv-ico dv-ico-dictionary']",
+    "Сотрудники": "//div[@data-control-name='BTL_Employees']//div[@class='open-dictionary-button-icon dv-ico dv-ico-dictionary']",
 }
 
 
