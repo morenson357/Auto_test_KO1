@@ -39,3 +39,4 @@ def delete_report(browser: webdriver.Chrome, name_report:str):
     time.sleep(2)
     browser.find_element(By.XPATH, "//button[@class='button-helper empty-text stretch-width align-center']").click()
     time.sleep(2)
+    print("Отчет удален - ОК")

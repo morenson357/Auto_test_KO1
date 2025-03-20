@@ -27,7 +27,14 @@ attributes_report_dictionary_access = {
     "Сотрудники": "//div[@data-control-name='BTL_Employees']//div[@class='open-dictionary-button-icon dv-ico dv-ico-dictionary']",
 }
 
-
+parameters_report = [
+    {"type": "Диапазон дат", "name": "date", "text_mark": "date", "heant": "date", "nodes": "", "required": "False", "hidden": "False", "property": "", "value": ""},
+    {"type": "Диапазон чисел", "name": "num", "text_mark": "num", "heant": "num", "nodes": "", "required": "False", "hidden": "False", "property": ""},
+    {"type": "ЭУ Перечисление", "name": "combo", "text_mark": "combo", "heant": "combo", "nodes": "", "required": "False", "hidden": "False", "property": "ENUM=0|EUR,1|RUB,2|USD;PROPERTY.default = 1"},
+    {"type": "ЭУ Строка конструктора справочников", "name": "constr", "text_mark": "constr", "heant": "constr", "nodes": "Группы Договоров", "required": "False", "hidden": "False", "property": ""},
+    {"type": "ЭУ Подразделение", "name": "Subdivision", "text_mark": "Subdivision", "heant": "Subdivision", "nodes": "", "required": "False", "hidden": "False", "property": ""},
+    {"type": "ЭУ Сотрудники", "name": "person", "text_mark": "person", "heant": "person", "nodes": "", "required": "False", "hidden": "False", "property": ""}
+]
 
 
 

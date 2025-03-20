@@ -68,17 +68,22 @@ with webdriver.Chrome() as browser:
             if parameter_type == 'Расширение файла отчета':
                 #Перезапись Названия параметра в списке.
                 control_names[i] = 'format'
+                time.sleep(1)
             elif parameter_type == 'ЭУ Ссылка на карточку':
                 #Заполнение свойства Подсказка.
                 prompts = browser.find_elements(By.XPATH, attributes_report_dictionary['Подсказка'])
                 prompts[i].send_keys("link")
+                time.sleep(1)
             elif parameter_type == 'ЭУ Строка конструктора справочников':
                 #Выбор узла конструктора справочников.
                 nodes_directory = browser.find_elements(By.XPATH, attributes_report_dictionary['Узел конструктора справочника'])
+                time.sleep(1)
                 nodes_directory[i].click()
                 browser.find_element(By.XPATH, "//div[text() = 'Выбрать']").click()
 
+
         #Сохранить отчет.
+        time.sleep(5)
         browser.find_element(By.CSS_SELECTOR, "[class='button-helper card-type-background-color-hover card-type-background-color-light primary-button align-center']").click()
         time.sleep(3)
 
@@ -105,11 +110,11 @@ with webdriver.Chrome() as browser:
 
         #Формирование результатов проверки.
         if len(errors) == 0:
-            print("Автотест методики проверки №2.3 завершен Успешно")
             browser.find_element(By.XPATH, "//div[text() = 'Отменить']").click()
             #Удаление отчета
             transition_to_setting_reports(browser)
             delete_report(browser, name_report)
+            print("Автотест методики проверки №2.3 завершен Успешно")
         else:
             print("\nАвтотест методики проверки №2.1 завершен с Ошибкой:")
             for error in errors:
