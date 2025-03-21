@@ -45,7 +45,8 @@ with webdriver.Chrome() as browser:
         control_names = []
         for row_pam in parameters_report:
             #Добавление новой строки таблицы параметров.
-            browser.find_element(By.XPATH, '//div[@data-control-name="BTL_ReportParametersTable"]//span[@data-tipso-text="Добавить строку"]').click()
+            add_row = browser.find_element(By.XPATH, "//div[@data-control-name='BTL_ReportParametersTable']//button[@data-button-name = 'add-row']")
+            add_row.click()
 
             # Добавление нового параметра 1, 2, 3...
             buttons = browser.find_elements(By.XPATH, attributes_report_dictionary['Параметр'])
@@ -66,9 +67,10 @@ with webdriver.Chrome() as browser:
             #Заполнение узлов
             if row_pam['nodes'] != '':
                 nodes_p = browser.find_elements(By.XPATH, attributes_report_dictionary['Узел конструктора справочника'])
-                time.sleep(1)
                 nodes_p[-1].click()
-                browser.find_element(By.XPATH, "//div[text() = 'Выбрать']").click()
+                time.sleep(5)
+                browser.find_element(By.XPATH, "//div[text() = 'Выбрать']/ancestor::button").click()
+                time.sleep(5)
             #Заполнение свойств
             if row_pam['property'] != '':
                 props_p = browser.find_elements(By.XPATH, attributes_report_dictionary['Свойства'])
@@ -82,23 +84,25 @@ with webdriver.Chrome() as browser:
         transition_to_report_list(browser)
         browser.find_element(By.XPATH, "//div[text() = 'test_report_pmi_dell']").click()
 
-        #Функция проверки присутствия элемента на разметке.
+        #Функция проверки присутствия элементов на разметке.
         def check_exists_by_xpath(xpath):
             try:
-                browser.find_elements(By.XPATH, xpath)
-            except NoSuchElementException:
+               elements = browser.find_elements(By.XPATH, xpath)
+               return len(elements) > 0
+            except Exception as e:
+                print(f"Произошла непредвиденная ошибка: {e}")
                 return False
-            return True
 
-        errors = []
         value_controls = []
-        #Проверка присутствия элементов на разметке.
+        #Заполнение элементов на разметке.
         for row_pam in parameters_report:
-            print(row_pam['name'])
+
+            #Заполнение Диапазон дат.
             if row_pam['type'] == "Диапазон дат":
                 xpath_control = "//div[contains(@data-control-name, '" + row_pam['name'] + "')]//button[@class = 'MuiButtonBase-root MuiIconButton-root']"
                 control_date = browser.find_elements(By.XPATH, xpath_control)
                 control_date[0].click()
+                time.sleep(2)
                 browser.find_element(By.XPATH, "//span[text() = 'СЕГОДНЯ']/ancestor::button").click()
                 value_controls.append(browser.find_elements(By.XPATH, "//div[contains(@data-control-name, '" + row_pam['name'] + "')]//input")[0].get_attribute('value'))
 
@@ -108,7 +112,7 @@ with webdriver.Chrome() as browser:
                 browser.find_element(By.XPATH, "//span[text() = 'НЕДЕЛЯ']/ancestor::button").click()
                 value_controls.append(browser.find_elements(By.XPATH, "//div[contains(@data-control-name, '" + row_pam['name'] + "')]//input")[1].get_attribute('value'))
 
-
+            # Заполнение Диапазона чисел.
             elif row_pam['type'] == "Диапазон чисел":
                 xpath_control = "//div[contains(@data-control-name, '" + row_pam['name'] + "')]//input"
                 control_num = browser.find_elements(By.XPATH, xpath_control)
@@ -117,6 +121,7 @@ with webdriver.Chrome() as browser:
                 control_num[1].send_keys("3000")
                 #value_controls.append("3000")
 
+            # Заполнение ЭУ Строка конструктора справочников.
             elif row_pam['type'] == "ЭУ Строка конструктора справочников":
                 xpath_control = "//div[contains(@data-control-name, '" + row_pam['name'] + "')]//button[@data-button-name='open-dictionary']"
                 browser.find_element(By.XPATH, xpath_control).click()
@@ -124,6 +129,7 @@ with webdriver.Chrome() as browser:
                 value_controls.append("Закупки")
                 browser.find_element(By.XPATH, "//button[@data-button-name = 'ok']").click()
 
+            # Заполнение ЭУ Подразделение.
             elif row_pam['type'] == "ЭУ Подразделение":
                 xpath_control = "//div[contains(@data-control-name, '" + row_pam['name'] + "')]//button[@data-button-name='open-dictionary']"
                 browser.find_element(By.XPATH, xpath_control).click()
@@ -131,66 +137,105 @@ with webdriver.Chrome() as browser:
                 value_controls.append("DV")
                 browser.find_element(By.XPATH, "//div[text() = 'Выбрать']").click()
 
+            # Заполнение ЭУ Сотрудники.
             elif row_pam['type'] == "ЭУ Сотрудники":
                 xpath_control = "//div[contains(@data-control-name, '" + row_pam['name'] + "')]//button[@data-button-name='show-variants']"
                 browser.find_element(By.XPATH, xpath_control).click()
                 browser.find_element(By.XPATH, "//span[@title = 'Аксенов А. А.']/ancestor::div[@class='variant-row']").click()
                 value_controls.append("Аксенов А. А.")
-                print(value_controls)
+            # Заполнение ЭУ Перечисление.
             elif row_pam['type'] == "ЭУ Перечисление":
                 value_controls.append("RUB")
 
+        #Сохранение шаблона параметров и выбор Новые параметры
         browser.find_element(By.XPATH, "//div[text() = 'Сохранить как']").click()
+        time.sleep(2)
         browser.find_element(By.XPATH, "//div[@data-control-name='templateName']//input").send_keys("testTemplate")
-        browser.find_element(By.XPATH, "//div[@class='modal-dialog-button-panel-item']//div[text() = 'Сохранить']").click()
+        time.sleep(2)
+        browser.find_element(By.XPATH, "//div[@class='modal-dialog-button-panel-item']//div[text() = 'Сохранить']/ancestor::button").click()
+        time.sleep(2)
+        browser.find_element(By.XPATH, "//button[@class = 'button-helper empty-text stretch-width align-center']").click()
+        time.sleep(2)
         browser.find_element(By.XPATH, "//div[text() = 'testTemplate']").click()
+        time.sleep(2)
         browser.find_element(By.XPATH, "//div[text() = 'Новые параметры']").click()
+        time.sleep(2)
+
 
         result = True
         out_value = []
+        #Проверка очистки формы параметров.
+        for row_pam in parameters_report:
+
+            if row_pam['type'] == 'Диапазон дат':
+                xpath_control = "//div[contains(@data-control-name, '" + row_pam['name'] + "')]//input"
+                control_date = browser.find_elements(By.XPATH, xpath_control)
+                if control_date[0].get_attribute("value") != '' and control_date[1].get_attribute("value") != '':
+                    result = False
+                    out_value.append(row_pam['type'] + "- не очищено")
+
+            elif row_pam['type'] == "ЭУ Строка конструктора справочников":
+                xpath_control = "//div[contains(@data-control-name, '" + row_pam['name'] + "')]//input"
+                if browser.find_element(By.XPATH, xpath_control).get_attribute("value") != '':
+                    result = False
+                    out_value.append(row_pam['type'] + "- не очищено")
+
+            elif row_pam['type'] == "ЭУ Подразделение":
+                xpath_control = "//div[contains(@data-control-name, '" + row_pam['name'] + "')]//input"
+                if browser.find_element(By.XPATH, xpath_control).get_attribute("value") != '':
+                    result = False
+                    out_value.append(row_pam['type'] + "- не очищено")
+
+            elif row_pam['type'] == "ЭУ Сотрудники":
+                xpath_control = "//div[contains(@data-control-name, '" + row_pam['name'] + "')]//span[text() = 'Аксенов А. А.']"
+                if (check_exists_by_xpath(xpath_control) == True):
+                    result = False
+                    out_value.append(row_pam['type'] + "- не очищено")
+
+        #Результат проверки очистки формы
+        if result == False:
+            print("\nАвтотест методики проверки №2.5 завершен с Ошибкой:")
+            for value in out_value:
+                print(value)
+                quit()
+
+        #Выбор сохраненного шаблона
+        browser.find_element(By.XPATH, "//div[text() = 'Новые параметры']").click()
+        time.sleep(2)
+        browser.find_element(By.XPATH, "//div[text() = 'testTemplate']").click()
+        time.sleep(2)
+
+        #Проверка соответствия заданым параметрам
         for row_pam in parameters_report:
             if row_pam['type'] == 'Диапазон дат':
                 xpath_control = "//div[contains(@data-control-name, '" + row_pam['name'] + "')]//input"
                 control_date = browser.find_elements(By.XPATH, xpath_control)
-                if control_date[0].get_attribute("value") == '' and control_date[1].get_attribute("value") == '':
+                if control_date[0].get_attribute("value") != value_controls[0] and control_date[1].get_attribute("value") != value_controls[1]:
                     result = False
-                    out_value.append(row_pam['type'] + "- значение не заполнено")
-            if row_paw['type'] == row_pam['type'] == "ЭУ Строка конструктора справочников":
-                xpath_control = "//div[contains(@data-control-name, '" + row_pam['name'] + "')]//button[@data-button-name='open-dictionary']"
-                browser.find_element(By.XPATH, xpath_control).click()
-                browser.find_element(By.XPATH, "//span[text() = 'СЕГОДНЯ']/ancestor::button").click()
-                value_controls.append(browser.find_elements(By.XPATH, "//div[contains(@data-control-name, '" + row_pam['name'] + "')]//input")[0].get_attribute('value'))
-
-                time.sleep(5)
-                control_date[1].click()
-                time.sleep(2)
-                browser.find_element(By.XPATH, "//span[text() = 'НЕДЕЛЯ']/ancestor::button").click()
-                value_controls.append(browser.find_elements(By.XPATH, "//div[contains(@data-control-name, '" + row_pam['name'] + "')]//input")[1].get_attribute('value'))
-
-
-
-
-
-
-
-
-
-
-            '''if (check_exists_by_xpath(xpath_control) == False):
-                errors.append('ЭУ с названием ' + row_pam['type'] + ' не найден - ERROR' )
-            else:
-                contrl = browser.find_element(By.XPATH, xpath_control)
-                contrl.send_keys()'''
-
-
-
-
-
-
-
+                    out_value.append(row_pam['type'] + "- пуст")
+            elif row_pam['type'] == "ЭУ Перечисление":
+                xpath_control = "//div[contains(@data-control-name, '" + row_pam['name'] + "')]//div[text() = '"+ value_controls[2] +"']"
+                if check_exists_by_xpath(xpath_control) == False:
+                    result = False
+                    out_value.append(row_pam['type'] + "- пуст")
+            elif row_pam['type'] == "ЭУ Строка конструктора справочников":
+                xpath_control = "//div[contains(@data-control-name, '" + row_pam['name'] + "')]//input"
+                if browser.find_element(By.XPATH, xpath_control).get_attribute("value") != value_controls[3]:
+                    result = False
+                    out_value.append(row_pam['type'] + "- пуст")
+            elif row_pam['type'] == "ЭУ Подразделение":
+                xpath_control = "//div[contains(@data-control-name, '" + row_pam['name'] + "')]//input"
+                if browser.find_element(By.XPATH, xpath_control).get_attribute("value") != value_controls[4]:
+                    result = False
+                    out_value.append(row_pam['type'] + "- пуст")
+            elif row_pam['type'] == "ЭУ Сотрудники":
+                xpath_control = "//div[contains(@data-control-name, '" + row_pam['name'] + "')]//span[text() = 'Аксенов А. А.']"
+                if (check_exists_by_xpath(xpath_control) == False):
+                    result = False
+                    out_value.append(row_pam['type'] + "- пуст")
 
         #Формирование результатов проверки.
-        if len(errors) == 0:
+        if result == True:
             print("Автотест методики проверки №2.5 завершен Успешно")
             browser.find_element(By.XPATH, "//div[text() = 'Отменить']").click()
             #Удаление отчета
@@ -198,8 +243,8 @@ with webdriver.Chrome() as browser:
             delete_report(browser, name_report)
         else:
             print("\nАвтотест методики проверки №2.5 завершен с Ошибкой:")
-            for error in errors:
-                print(error)
+            for value in out_value:
+                print(value)
 
     except Exception as ex:
         print(f"Автотест методики проверки №2.5 завершен с Ошибкой: {str(ex)}")
