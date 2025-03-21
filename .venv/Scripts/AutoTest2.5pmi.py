@@ -158,7 +158,6 @@ with webdriver.Chrome() as browser:
             if row_paw['type'] == row_pam['type'] == "ЭУ Строка конструктора справочников":
                 xpath_control = "//div[contains(@data-control-name, '" + row_pam['name'] + "')]//button[@data-button-name='open-dictionary']"
                 browser.find_element(By.XPATH, xpath_control).click()
-                    print
                 browser.find_element(By.XPATH, "//span[text() = 'СЕГОДНЯ']/ancestor::button").click()
                 value_controls.append(browser.find_elements(By.XPATH, "//div[contains(@data-control-name, '" + row_pam['name'] + "')]//input")[0].get_attribute('value'))
 

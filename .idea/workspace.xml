@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8f2c27e-0534-4258-8e52-10bee79501d5" name="Changes" comment="Second Commit">
+    <list default="true" id="c8f2c27e-0534-4258-8e52-10bee79501d5" name="Changes" comment="5 Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Scripts/AutoTest2.3pmi.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Scripts/AutoTest2.3pmi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Scripts/action_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Scripts/action_report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dir/attributes_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/dir/attributes_report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Scripts/AutoTest2.5pmi.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Scripts/AutoTest2.5pmi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,12 +196,21 @@
       <option name="project" value="LOCAL" />
       <updated>1741945098742</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="5 Commit">
+      <option name="closed" value="true" />
+      <created>1742481098119</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1742481098119</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Firs Commit" />
     <MESSAGE value="Second Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second Commit" />
+    <MESSAGE value="5 Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="5 Commit" />
   </component>
 </project>
