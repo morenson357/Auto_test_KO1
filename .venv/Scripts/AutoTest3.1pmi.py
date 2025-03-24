@@ -52,7 +52,7 @@ with webdriver.Chrome() as browser:
         browser.find_element(By.XPATH, "//div[text()='Отменить']").click()
 
         # Удаление строки подключения
-        delete_report(browser, attributes_connect[0]["value"])delete_report(browser, attributes_connect[0]["value"])
+        delete_report(browser, attributes_connect[0]["value"])
 
         # Расчет результатов.
         if len(errors) > 0:
