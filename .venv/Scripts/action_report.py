@@ -29,6 +29,18 @@ def transition_to_report_list(browser: webdriver.Chrome):
     report_list = browser.find_element(By.XPATH, "//li[@class='MuiListItem-root MuiListItem-gutters MuiListItem-padding css-tciken-MuiListItem-root']//span[text()='Отчеты']")
     report_list.click()
 
+#Нажатие на кпноку создания строки подключения
+def create_new_connect(browser: webdriver.Chrome):
+    create_connect = browser.find_element(By.XPATH, "//button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-mndvqg-MuiButtonBase-root-MuiIconButton-root']")
+    create_connect.click()
+
+# Переход на вкладку Подключения
+def transition_to_connect(browser: webdriver.Chrome):
+    to_connect = browser.find_element(By.XPATH, "//span[text() = 'Подключения']/ancestor::div[@class = 'MuiListItemText-root css-cfq8qh-MuiListItemText-root']")
+    to_connect.click()
+    print("Выполнен переход на вкладку \"Подключения\" - ОК")
+
+#Удаление отчета
 def delete_report(browser: webdriver.Chrome, name_report:str):
     actionChains = ActionChains(browser)
     xpath_name_report = "//div[text()='" + name_report + "']"
@@ -40,3 +52,4 @@ def delete_report(browser: webdriver.Chrome, name_report:str):
     browser.find_element(By.XPATH, "//button[@class='button-helper empty-text stretch-width align-center']").click()
     time.sleep(2)
     print("Отчет удален - ОК")
+

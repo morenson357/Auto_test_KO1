@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8f2c27e-0534-4258-8e52-10bee79501d5" name="Changes" comment="7">
+    <list default="true" id="c8f2c27e-0534-4258-8e52-10bee79501d5" name="Changes" comment="8 Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.venv/Scripts/AutoTest2.5pmi.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Scripts/AutoTest2.5pmi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Scripts/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Scripts/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Scripts/action_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Scripts/action_report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dir/attributes_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/dir/attributes_report.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +39,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/morenson357/Auto_test_KO1.git&quot;,
-    &quot;accountId&quot;: &quot;e6b767da-2b48-4de3-a59d-28ca22c51844&quot;
+    &quot;accountId&quot;: &quot;d20d9e9e-d903-4854-bf59-d5c92800c648&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -59,15 +60,17 @@
     "Python.AutoTest2.3pmi.executor": "Run",
     "Python.AutoTest2.5pmi.executor": "Run",
     "Python.AutoTest2.6pmi.executor": "Run",
+    "Python.AutoTest3.1pmi.executor": "Run",
     "Python.attributes_report.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/python/Auto_test_KO1",
     "settings.editor.selected.configurable": "terminal"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.AutoTest2.5pmi">
+  <component name="RunManager" selected="Python.AutoTest3.1pmi">
     <configuration name="AutoTest2.1pmi" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="PythonProject" />
       <option name="ENV_FILES" value="" />
@@ -156,8 +159,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="AutoTest3.1pmi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonProject" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.venv/Scripts" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.venv/Scripts/AutoTest3.1pmi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.AutoTest3.1pmi" />
         <item itemvalue="Python.AutoTest2.5pmi" />
         <item itemvalue="Python.AutoTest2.3pmi" />
         <item itemvalue="Python.AutoTest2.2pmi" />
@@ -220,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742542678313</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="8 Commit">
+      <option name="closed" value="true" />
+      <created>1742558225104</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742558225104</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -229,6 +263,7 @@
     <MESSAGE value="5 Commit" />
     <MESSAGE value="6 Commit" />
     <MESSAGE value="7" />
-    <option name="LAST_COMMIT_MESSAGE" value="7" />
+    <MESSAGE value="8 Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="8 Commit" />
   </component>
 </project>

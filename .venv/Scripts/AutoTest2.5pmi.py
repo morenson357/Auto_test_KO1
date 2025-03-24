@@ -12,6 +12,7 @@ from selenium.common.exceptions import NoSuchElementException
 from Authorization_Admin import authorization_docsvision_admin
 from dir.auth_date import login, passwd
 from action_report import transition_to_report_designer, transition_to_setting_reports, click_to_create_report, transition_to_report_list, delete_report
+
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 
@@ -194,7 +195,7 @@ with webdriver.Chrome() as browser:
 
         #Результат проверки очистки формы
         if result == False:
-            print("\nАвтотест методики проверки №2.5 завершен с Ошибкой:")
+            print("\nАвтотест методики проверки №2.5-№2.6 завершен с Ошибкой:")
             for value in out_value:
                 print(value)
                 quit()
@@ -236,16 +237,16 @@ with webdriver.Chrome() as browser:
 
         #Формирование результатов проверки.
         if result == True:
-            print("Автотест методики проверки №2.5 завершен Успешно")
+            print("Автотест методики проверки №2.5-№2.6 завершен Успешно")
             browser.find_element(By.XPATH, "//div[text() = 'Отменить']").click()
             #Удаление отчета
             transition_to_setting_reports(browser)
             delete_report(browser, name_report)
         else:
-            print("\nАвтотест методики проверки №2.5 завершен с Ошибкой:")
+            print("\nАвтотест методики проверки №2.5-№2.6 завершен с Ошибкой:")
             for value in out_value:
                 print(value)
 
     except Exception as ex:
-        print(f"Автотест методики проверки №2.5 завершен с Ошибкой: {str(ex)}")
+        print(f"Автотест методики проверки №2.5-№2.6 завершен с Ошибкой: {str(ex)}")
 

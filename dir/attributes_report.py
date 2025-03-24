@@ -36,5 +36,12 @@ parameters_report = [
     {"type": "ЭУ Сотрудники", "name": "person", "text_mark": "person", "heant": "person", "nodes": "", "required": "False", "hidden": "False", "property": ""}
 ]
 
+attributes_connect = [
+    {"name": "Название", "path": "//div[@data-tipso-text='Название']//input", "value": "DocsVision"},
+    {"name": "Описание", "path": "//div[@data-tipso-text='Описание']//textarea", "value": "Test_Connect"},
+    {"name": "Строка подключения", "path": "//div[@data-tipso-text='Строка подключения']//input", "value": "Data Source=VM-DV-REPORT-02;Initial Catalog=Docsvision;Integrated Security=False;User ID=admconnection;Password=1QWerty_12345"}
+]
+
+
 
 
