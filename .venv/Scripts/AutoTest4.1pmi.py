@@ -95,7 +95,7 @@ with webdriver.Chrome() as browser:
         report_access = "//div[text() = '" + name_report + "']"
         if (check_exists_by_xpath(report_access) == True):
             print("Автотест методики проверки №4.1` завершен - Успешно")
-
+        #Удаление отчета и перелогинимание за администратора
         time.sleep(9999999)
 
     except Exception as ex:
