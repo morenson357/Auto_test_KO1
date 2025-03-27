@@ -123,5 +123,10 @@ with webdriver.Chrome() as browser:
             print("Автотест методики проверки №2.4 завершен - Успешно")
         else:
             print("Автотест методики проверки №2.4 завершен с ошибкой")
+
+        browser.switch_to.window(handles[0])
+        transition_to_setting_reports(browser)
+        delete_report(browser, name_report)
+
     except Exception as ex:
         print(f"Автотест методики проверки №2.4 завершен с Ошибкой: {str(ex)}")
