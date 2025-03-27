@@ -13,6 +13,7 @@ from dir.attributes_report import attributes_report_dictionary
 
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
+options.add_argument("--ignore-certificate-errors")
 with webdriver.Chrome() as browser:
     browser.implicitly_wait(20)
     try:
@@ -35,6 +36,8 @@ with webdriver.Chrome() as browser:
         browser.find_element(By.XPATH, attributes_report_dictionary['Провайдер']).click()
         time.sleep(2)
         # Выбор провайдера FastReport
+        name_provider = 'FastReport'
+        browser.find_element(By.XPATH, "//div[@class = 'node-name'][text() = '" + name_provider +"']").click()
         browser.find_element(By.XPATH, "//button[@data-button-name='ok']").click()
         browser.find_element(By.CSS_SELECTOR, "[class='button-helper card-type-background-color-hover card-type-background-color-light primary-button align-center']").click()
         print("Сформирован черновик отчета - ОК")
