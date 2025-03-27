@@ -32,7 +32,7 @@ with webdriver.Chrome() as browser:
         click_to_create_report(browser)
 
         # Заполнение обязательных атрибутов.
-        name_report = "test_report_pmi_dell"
+        name_report = "test_report_pmi_dell 2.3"
         browser.find_element(By.XPATH, attributes_report_dictionary['Название отчета']).send_keys(name_report)
         browser.find_element(By.XPATH, attributes_report_dictionary['Провайдер']).click()
         # Выбор провайдера FastReport
@@ -48,6 +48,7 @@ with webdriver.Chrome() as browser:
             browser.find_element(By.XPATH, '//div[@data-control-name="BTL_ReportParametersTable"]//span[@data-tipso-text="Добавить строку"]').click()
 
             # Добавление нового параметра 1, 2, 3...
+            time.sleep(1)
             buttons = browser.find_elements(By.XPATH, attributes_report_dictionary['Параметр'])
             buttons[i].click()
             parameters = browser.find_elements(By.XPATH, '//div[@class="directory-select-dialog "]//div[@tabindex=0]')
@@ -55,10 +56,12 @@ with webdriver.Chrome() as browser:
             browser.find_element(By.XPATH, "//button[@data-button-name='ok']").click()
 
             #Получение названия типа параметра.
+            time.sleep(1)
             parameters_name = browser.find_elements(By.XPATH, "//div[@data-control-name='BTL_Parameter[]']//input")
             parameter_type = parameters_name[i].get_attribute('value')
 
             #Заполнение Названия параметра и текста метки.
+            time.sleep(1)
             text_names = browser.find_elements(By.XPATH, attributes_report_dictionary['Название параметра'])
             text_names[i].send_keys('contrl' + str(i + 1))
             control_names.append('contrl' + str(i + 1))
@@ -71,11 +74,13 @@ with webdriver.Chrome() as browser:
                 time.sleep(1)
             elif parameter_type == 'ЭУ Ссылка на карточку':
                 #Заполнение свойства Подсказка.
+                time.sleep(1)
                 prompts = browser.find_elements(By.XPATH, attributes_report_dictionary['Подсказка'])
                 prompts[i].send_keys("link")
                 time.sleep(1)
             elif parameter_type == 'ЭУ Строка конструктора справочников':
                 #Выбор узла конструктора справочников.
+                time.sleep(1)
                 nodes_directory = browser.find_elements(By.XPATH, attributes_report_dictionary['Узел конструктора справочника'])
                 time.sleep(1)
                 nodes_directory[i].click()
@@ -86,11 +91,11 @@ with webdriver.Chrome() as browser:
         time.sleep(5)
         browser.find_element(By.CSS_SELECTOR, "[class='button-helper card-type-background-color-hover card-type-background-color-light primary-button align-center']").click()
         time.sleep(3)
-
+        print("Отчет сохранен - ОК")
         #Открытие созданного отчета.
         transition_to_report_list(browser)
-        browser.find_element(By.XPATH, "//div[text() = 'test_report_pmi_dell']").click()
-
+        browser.find_element(By.XPATH, "//div[text() = '"+ name_report +"']").click()
+        print("Отчет открыт - ОК")
         #Функция проверки присутствия элемента на разметке.
         def check_exists_by_xpath(xpath):
             try:
@@ -108,6 +113,7 @@ with webdriver.Chrome() as browser:
             if (check_exists_by_xpath(xpath_control) == False):
                 errors.append('ЭУ с названием ' + name + ' не найден - ERROR' )
 
+        print("Проверка присутствия элементов пройдена - ОК")
         #Формирование результатов проверки.
         if len(errors) == 0:
             browser.find_element(By.XPATH, "//div[text() = 'Отменить']").click()
