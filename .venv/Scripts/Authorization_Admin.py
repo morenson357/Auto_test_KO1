@@ -18,7 +18,7 @@ def authorization_docsvision_admin(browser: webdriver.Chrome, login:str, passwd:
     try:
         browser.get(auth_site)
 
-        time.sleep(10)
+        time.sleep(1)
         remove_user = "//span[text() = 'Сменить пользователя']"
         if check_exists_by_xpath(browser, remove_user) == True:
             browser.find_element(By.XPATH, "//span[text() = 'Сменить пользователя']").click()
@@ -30,7 +30,7 @@ def authorization_docsvision_admin(browser: webdriver.Chrome, login:str, passwd:
 
         # Клик по кнопке входа
         browser.find_element(By.CLASS_NAME, "login-button").click()
-
+        time.sleep(10)
         # Проверка загрузки основного меню
         browser.find_element(By.XPATH, main_menu)
 

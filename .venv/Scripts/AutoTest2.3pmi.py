@@ -81,7 +81,7 @@ with webdriver.Chrome() as browser:
                 nodes_directory[i].click()
                 browser.find_element(By.XPATH, "//div[text() = 'Выбрать']").click()
 
-
+        print("Параметры заполнены - ОК")
         #Сохранить отчет.
         time.sleep(5)
         browser.find_element(By.CSS_SELECTOR, "[class='button-helper card-type-background-color-hover card-type-background-color-light primary-button align-center']").click()
@@ -116,10 +116,10 @@ with webdriver.Chrome() as browser:
             delete_report(browser, name_report)
             print("Автотест методики проверки №2.3 завершен Успешно")
         else:
-            print("\nАвтотест методики проверки №2.1 завершен с Ошибкой:")
+            print("\nАвтотест методики проверки №2.3 завершен с Ошибкой:")
             for error in errors:
                 print(error)
 
     except Exception as ex:
-        print(f"Автотест методики проверки №2.2 завершен с Ошибкой: {str(ex)}")
+        print(f"Автотест методики проверки №2.3 завершен с Ошибкой: {str(ex)}")
 

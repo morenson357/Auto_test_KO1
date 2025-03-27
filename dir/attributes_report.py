@@ -1,3 +1,5 @@
+from dir.function_date import dateContract, dateContractss, dateAdditionaloptions
+
 #Атрибуты создания отчета на вкладке Основная информация
 attributes_report_dictionary = {
     "Название отчета": "//div[@data-control-name='Name']//input",
@@ -42,6 +44,21 @@ attributes_connect = [
     {"name": "Строка подключения", "path": "//div[@data-tipso-text='Строка подключения']//input", "value": "Data Source=VM-DV-REPORT-02;Initial Catalog=Docsvision;Integrated Security=False;User ID=admconnection;Password=1QWerty_12345"}
 ]
 
+parameters_generate_report = [
+    {"type": "Диапазон дат", "name": "Date", "text_mark": "Дата окончания договора", "heant": "Введите дату договора", "nodes": "", "required": "False", "hidden": "False", "property": "", "value": ""},
+    {"type": "Диапазон чисел", "name": "ContractSum", "text_mark": "Сумма договора", "heant": "Введите сумму договора", "nodes": "", "required": "False", "hidden": "False", "property": ""},
+    {"type": "Расширение файла отчета", "name": "FileView", "text_mark": "Формат вывода", "heant": "Введите формат вывода", "nodes": "", "required": "False", "hidden": "False", "property": "ENUM=HTML|HTML,PDF|PDF;PROPERTY.default = HTML"},
+    {"type": "ЭУ Перечисление", "name": "ContractCurrency", "text_mark": "Валюта", "heant": "Выберите валюту", "nodes": "", "required": "False", "hidden": "False", "property": "ENUM=0|EUR,1|RUB,2|USD;PROPERTY.default = 1"},
+    {"type": "ЭУ Подразделение", "name": "Subdivision", "text_mark": "Подразделение ответственного", "heant": "Выберите подразделение ответственного", "nodes": "", "required": "False", "hidden": "False", "property": ""},
+    {"type": "ЭУ Сотрудники", "name": "PartnerPerson", "text_mark": "Ответственнный", "heant": "Выберите ответственного", "nodes": "", "required": "False", "hidden": "False", "property": ""},
+    {"type": "ЭУ Строка конструктора справочников", "name": "Category", "text_mark": "Категория", "heant": "Выберите категорию", "nodes": "Группы Договоров", "required": "False", "hidden": "False", "property": ""}
+]
+
+data_report = [
+    {"name": "Contracts", "type": "SQL", "connect": "docsvision", "function": dateContract},
+    {"name": "Contractss", "type": "SQL", "connect": "docsvision", "function": dateContractss},
+    {"name": "Additionaloptions", "type": "SQL", "connect": "docsvision", "function": "SELECT GETDATE() as DateNow"}
+]
 
 
 

@@ -15,6 +15,7 @@ from dir.auth_date import login, passwd
 
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
+options.add_argument("--ignore-certificate-errors")
 with webdriver.Chrome() as browser:
     browser.implicitly_wait(10)
     try:
@@ -43,8 +44,10 @@ with webdriver.Chrome() as browser:
         for i in add_rows:
             i.click()
 
-        #Проверка присутствия элементов на вкладке Основная информация.
+        #Проверка присутствия элементов и вкладки Основная информация.
         errors = []
+
+        browser.find_element(By.XPATH, "//li[@data-tipso-text='Основная информация']")
         print("Идёт проверка элементов Основная информация...")
         for key, value in attributes_report_dictionary.items():
             if (check_exists_by_xpath(value) == False):
@@ -58,6 +61,8 @@ with webdriver.Chrome() as browser:
             if (check_exists_by_xpath(value) == False):
                 errors.append('Элемент управления ' + key + ' не найден')
 
+        browser.find_element(By.XPATH, "//div[text() = 'Отменить']/ancestor::button[@tabindex='-1']").click()
+        browser.find_element(By.XPATH, "//button[@datatestid='button-ok']").click()
         #Расчет результата выполнения кейса.
         if (len(errors) == 0):
             print("\nАвтотест методики проверки №2.1 завершен - Успешно")

@@ -12,6 +12,7 @@ from selenium.common.exceptions import NoSuchElementException
 from Authorization_Admin import authorization_docsvision_admin
 from dir.auth_date import login, passwd
 from action_report import transition_to_report_designer, transition_to_setting_reports, click_to_create_report, transition_to_report_list, delete_report
+from dir.function_date import dateContract, dateContractss, dateAdditionaloptions
 
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
