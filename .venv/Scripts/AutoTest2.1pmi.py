@@ -22,6 +22,7 @@ options.add_argument("--disable-web-security")
 with webdriver.Chrome() as browser:
     browser.implicitly_wait(10)
     try:
+
         # Проверка авторизации пользователя.
         if (authorization_docsvision_admin(browser, login, passwd) == False):
             quit()
