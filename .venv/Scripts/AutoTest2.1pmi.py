@@ -16,6 +16,9 @@ from dir.auth_date import login, passwd
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 options.add_argument("--ignore-certificate-errors")
+options.add_argument("--allow-running-insecure-content")
+options.add_argument("--disable-web-security")
+
 with webdriver.Chrome() as browser:
     browser.implicitly_wait(10)
     try:
