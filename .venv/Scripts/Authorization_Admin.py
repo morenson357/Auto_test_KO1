@@ -17,6 +17,7 @@ def authorization_docsvision_admin(browser: webdriver.Chrome, login:str, passwd:
     """Авторизует администратора в DocsVision и проверяет успешный вход."""
     try:
         browser.get(auth_site)
+        time.sleep(5)
         trust_button = "//button[@id = 'proceed-button']"
         if check_exists_by_xpath(browser, trust_button) == True:
             browser.find_element(By.XPATH, trust_button).click()

@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8f2c27e-0534-4258-8e52-10bee79501d5" name="Changes" comment="17">
+    <list default="true" id="c8f2c27e-0534-4258-8e52-10bee79501d5" name="Changes" comment="18">
+      <change afterPath="$PROJECT_DIR$/.venv/Scripts/AutoTest2_1pmi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/Scripts/AutoTest2_2pmi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.venv/Scripts/Authorization_Admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Scripts/Authorization_Admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Scripts/AutoTest2.1pmi.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Scripts/AutoTest2.1pmi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Scripts/AutoTest2.1pmi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Scripts/AutoTest2.2pmi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Scripts/AutoTest2.3pmi.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Scripts/AutoTest2_3pmi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Scripts/AutoTest2.4pmi.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Scripts/AutoTest2_4pmi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Scripts/AutoTest2.5pmi.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Scripts/AutoTest2_5pmi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Scripts/AutoTest3.1pmi.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Scripts/AutoTest3_1pmi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Scripts/AutoTest4.1pmi.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Scripts/AutoTest4_1pmi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,29 +58,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.21344321.executor&quot;: &quot;Run&quot;,
-    &quot;Python.2222.executor&quot;: &quot;Run&quot;,
-    &quot;Python.AutoTest2.1pmi.executor&quot;: &quot;Run&quot;,
-    &quot;Python.AutoTest2.2pmi.executor&quot;: &quot;Run&quot;,
-    &quot;Python.AutoTest2.3pmi.executor&quot;: &quot;Run&quot;,
-    &quot;Python.AutoTest2.4pmi.executor&quot;: &quot;Run&quot;,
-    &quot;Python.AutoTest2.5pmi.executor&quot;: &quot;Run&quot;,
-    &quot;Python.AutoTest2.6pmi.executor&quot;: &quot;Run&quot;,
-    &quot;Python.AutoTest3.1pmi.executor&quot;: &quot;Run&quot;,
-    &quot;Python.AutoTest4.1pmi.executor&quot;: &quot;Run&quot;,
-    &quot;Python.attributes_report.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/python/Auto_test_KO1&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.21344321.executor": "Run",
+    "Python.2222.executor": "Run",
+    "Python.AutoTest2.1pmi.executor": "Run",
+    "Python.AutoTest2.2pmi.executor": "Run",
+    "Python.AutoTest2.3pmi.executor": "Run",
+    "Python.AutoTest2.4pmi.executor": "Run",
+    "Python.AutoTest2.5pmi.executor": "Run",
+    "Python.AutoTest2.6pmi.executor": "Run",
+    "Python.AutoTest2_1pmi (1).executor": "Run",
+    "Python.AutoTest3.1pmi.executor": "Run",
+    "Python.AutoTest3_1pmi.executor": "Run",
+    "Python.AutoTest4.1pmi.executor": "Run",
+    "Python.Main_auto_test.executor": "Run",
+    "Python.attributes_report.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/python/Auto_test_KO1",
+    "settings.editor.selected.configurable": "terminal"
   }
-}</component>
-  <component name="RunManager" selected="Python.AutoTest2.1pmi">
-    <configuration name="AutoTest2.1pmi" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+}]]></component>
+  <component name="RunManager" selected="Python.AutoTest3_1pmi">
+    <configuration name="AutoTest2_1pmi (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonProject" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.venv/Scripts" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.venv/Scripts/AutoTest2_1pmi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AutoTest2_1pmi" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="PythonProject" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -84,7 +118,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.venv/Scripts/AutoTest2.1pmi.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Bellomore\PycharmProjects\Auto_test_KO1\.venv\Scripts\AutoTest2_1pmi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -93,7 +127,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="AutoTest2.2pmi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="AutoTest2_3pmi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonProject" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -106,7 +140,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.venv/Scripts/AutoTest2.2pmi.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Bellomore\PycharmProjects\Auto_test_KO1\.venv\Scripts\AutoTest2_3pmi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -115,7 +149,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="AutoTest2.3pmi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="AutoTest2_4pmi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonProject" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -128,7 +162,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.venv/Scripts/AutoTest2.3pmi.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Bellomore\PycharmProjects\Auto_test_KO1\.venv\Scripts\AutoTest2_4pmi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -137,7 +171,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="AutoTest2.4pmi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="AutoTest3_1pmi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonProject" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -150,7 +184,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.venv/Scripts/AutoTest2.4pmi.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.venv/Scripts/AutoTest3_1pmi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -159,7 +193,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="AutoTest3.1pmi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Main_auto_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonProject" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -172,29 +206,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.venv/Scripts/AutoTest3.1pmi.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="AutoTest4.1pmi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PythonProject" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.venv/Scripts" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.venv/Scripts/AutoTest4.1pmi.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.venv/Scripts/Main_auto_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -205,11 +217,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.AutoTest2.4pmi" />
-        <item itemvalue="Python.AutoTest2.3pmi" />
-        <item itemvalue="Python.AutoTest2.2pmi" />
-        <item itemvalue="Python.AutoTest4.1pmi" />
-        <item itemvalue="Python.AutoTest3.1pmi" />
+        <item itemvalue="Python.AutoTest3_1pmi" />
+        <item itemvalue="Python.AutoTest2_1pmi (1)" />
+        <item itemvalue="Python.Main_auto_test" />
+        <item itemvalue="Python.AutoTest2_4pmi" />
+        <item itemvalue="Python.AutoTest2_3pmi" />
       </list>
     </recent_temporary>
   </component>
@@ -317,7 +329,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743159669716</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="18">
+      <option name="closed" value="true" />
+      <created>1743160715886</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1743160715886</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -332,6 +352,7 @@
     <MESSAGE value="13" />
     <MESSAGE value="14" />
     <MESSAGE value="17" />
-    <option name="LAST_COMMIT_MESSAGE" value="17" />
+    <MESSAGE value="18" />
+    <option name="LAST_COMMIT_MESSAGE" value="18" />
   </component>
 </project>
