@@ -53,6 +53,7 @@ def run_test():
                 time.sleep(2)
                 buttons = browser.find_elements(By.XPATH, attributes_report_dictionary['Параметр'])
                 buttons[i].click()
+                time.sleep(2)
                 parameters = browser.find_elements(By.XPATH, '//div[@class="directory-select-dialog "]//div[@tabindex=0]')
                 parameters[i].click()
                 browser.find_element(By.XPATH, "//button[@data-button-name='ok']").click()
@@ -79,14 +80,16 @@ def run_test():
                     time.sleep(2)
                     prompts = browser.find_elements(By.XPATH, attributes_report_dictionary['Подсказка'])
                     prompts[i].send_keys("link")
-                    time.sleep(2)
+                    time.sleep(3)
+                    print("link")
                 elif parameter_type == 'ЭУ Строка конструктора справочников':
                     #Выбор узла конструктора справочников.
-                    time.sleep(2)
                     nodes_directory = browser.find_elements(By.XPATH, attributes_report_dictionary['Узел конструктора справочника'])
                     time.sleep(2)
                     nodes_directory[i].click()
-                    browser.find_element(By.XPATH, "//div[text() = 'Выбрать']").click()
+                    time.sleep(2)
+                    browser.find_element(By.XPATH, "//div[text() = 'Выбрать']/ancestor::button").click()
+                    print("Узел конструктора справочника")
 
             print("Параметры заполнены - ОК")
             #Сохранить отчет.
@@ -130,4 +133,6 @@ def run_test():
 
         except Exception as ex:
             print(f"Автотест методики проверки №2.3 завершен с Ошибкой: {str(ex)}")
+
+
 
