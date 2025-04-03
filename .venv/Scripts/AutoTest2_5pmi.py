@@ -83,6 +83,7 @@ def run_test():
             time.sleep(3)
 
             #Открытие созданного отчета.
+            time.sleep(3)
             transition_to_report_list(browser)
             browser.find_element(By.XPATH, "//div[text() = 'test_report_pmi_dell']").click()
 

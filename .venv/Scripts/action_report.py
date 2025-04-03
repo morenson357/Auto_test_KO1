@@ -6,6 +6,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 from selenium.webdriver import ActionChains
+from Authorization_Admin import check_exists_by_xpath
 
 # Переход в модуль конструктор отчетов.
 def transition_to_report_designer(browser: webdriver.Chrome):
@@ -31,8 +32,13 @@ def transition_to_report_list(browser: webdriver.Chrome):
 
 #Нажатие на кпноку создания строки подключения
 def create_new_connect(browser: webdriver.Chrome):
-    create_connect = browser.find_element(By.XPATH, "//button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-mndvqg-MuiButtonBase-root-MuiIconButton-root']")
-    create_connect.click()
+    time.sleep(12)
+    create_connect = "//button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-mndvqg-MuiButtonBase-root-MuiIconButton-root']"
+    if check_exists_by_xpath(browser, create_connect) == True:
+        browser.find_element(By.XPATH, create_connect).click()
+    else:
+        print("Кнопка создания строки подключения не найдена ERROR")
+        quit()
 
 # Переход на вкладку Подключения
 def transition_to_connect(browser: webdriver.Chrome):
