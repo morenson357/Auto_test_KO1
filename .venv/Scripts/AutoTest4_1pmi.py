@@ -100,6 +100,8 @@ def run_test():
             report_access = "//div[text() = '" + name_report + "']"
             if (check_exists_by_xpath(report_access) == True):
                 result = True
+                browser.find_element(By.XPATH, report_access).click()
+                browser.find_element(By.XPATH, "//div[text() = 'Отменить']/ancestor::button)").click()
                 print("Отчет найден на разметке - Успешно")
 
             browser.find_element(By.XPATH, "//div[@data-testid = 'user-menu-button']").click()
