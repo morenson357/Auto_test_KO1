@@ -49,32 +49,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.21344321.executor": "Run",
-    "Python.2222.executor": "Run",
-    "Python.AutoTest2.1pmi.executor": "Run",
-    "Python.AutoTest2.2pmi.executor": "Run",
-    "Python.AutoTest2.3pmi.executor": "Run",
-    "Python.AutoTest2.4pmi.executor": "Run",
-    "Python.AutoTest2.5pmi.executor": "Run",
-    "Python.AutoTest2.6pmi.executor": "Run",
-    "Python.AutoTest2_1pmi (1).executor": "Run",
-    "Python.AutoTest2_3pmi (1).executor": "Run",
-    "Python.AutoTest3.1pmi.executor": "Run",
-    "Python.AutoTest3_1pmi.executor": "Run",
-    "Python.AutoTest4.1pmi.executor": "Run",
-    "Python.AutoTest4_1pmi.executor": "Run",
-    "Python.Main_auto_test.executor": "Run",
-    "Python.attributes_report.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/python/Auto_test_KO1",
-    "settings.editor.selected.configurable": "terminal"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.21344321.executor&quot;: &quot;Run&quot;,
+    &quot;Python.2222.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AutoTest2.1pmi.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AutoTest2.2pmi.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AutoTest2.3pmi.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AutoTest2.4pmi.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AutoTest2.5pmi.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AutoTest2.6pmi.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AutoTest2_1pmi (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.AutoTest2_3pmi (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.AutoTest3.1pmi.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AutoTest3_1pmi.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AutoTest4.1pmi.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AutoTest4_1pmi.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Main_auto_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.attributes_report.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/python/Auto_test_KO1&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.AutoTest4_1pmi">
     <configuration name="AutoTest2_1pmi (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonProject" />
